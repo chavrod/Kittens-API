@@ -1,0 +1,11 @@
+<div>
+  <h3><%= @kitten.name %></h3>
+  <p><%= @kitten.age %></p>
+</div>
+
+<div>
+  <%= link_to "Edit this kitten", edit_kitten_path(@kitten) %> |
+  <%= link_to "Back to all kittens", kittens_path %>
+
+  <%= button_to "Destroy this kitten", @kitten, method: :delete %>
+</div>

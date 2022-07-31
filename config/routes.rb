@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :kittens
+  root "kittens#index"
 
-  root 'kittens#index'
+  resources :kittens
 end
