@@ -6,5 +6,6 @@
     <li><%= kitten.cuteness %></li>
     <li><%= kitten.softness %></li>
     <%= link_to "Show this kitten", kitten %>
+    <%= button_to "Destroy this kitten", kitten, method: :delete %>
   <% end %>
 </ul>

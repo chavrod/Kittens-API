@@ -1,4 +1,18 @@
 <%= form_with model: kitten do |form| %>
+
+  <div>
+    <% if kitten.errors.any? %>
+      <p>
+        <%= pluralize(kitten.errors.count, "error") %> prohibited this kitten from being created:
+      </p>
+      <ul>
+        <% kitten.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+  
   <div>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
